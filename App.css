@@ -1,0 +1,124 @@
+/* frontend/apiDemo/src/App.css */
+
+:root {
+  --bg: #fdfcfc;
+  --card: #ffffff;
+  --text: #222;
+  --primary: #0077cc;
+}
+
+.dark {
+  --bg: #1e1e1e;
+  --card: #2c2c2c;
+  --text: #131111;
+  --primary: #4da3ff;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+}
+
+.app {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  color: var(--text);
+}
+
+/* Dark Mode Button */
+button {
+  padding: 10px;
+  border: none;
+  background: var(--primary);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Form */
+form {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+small {
+  color: gray;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+/* Patient Card */
+.card {
+  background: var(--card);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 15px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Avatar */
+.avatar {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.card h3 {
+  margin: 0;
+}
+
+.card p {
+  margin: 4px 0;
+}
+
+hr {
+  margin: 25px 0;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Hospital Management Environment",
+  "values": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:5000",
+      "enabled": true
+    },
+    {
+      "key": "hospital_id",
+      "value": "1",
+      "enabled": true
+    }
+  ]
+}

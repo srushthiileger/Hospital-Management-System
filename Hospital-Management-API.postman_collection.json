@@ -1,0 +1,146 @@
+{
+  "info": {
+    "name": "Hospital Management API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Patient",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\":\"Rahul\",\n  \"age\":25,\n  \"Gender\":\"Male\",\n  \"phone\":\"9876543210\",\n  \"Adress\":\"Belagavi\",\n  \"DOF\":\"2026-07-07\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/hospital",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "hospital"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Create Patient (Missing Field)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\":\"Rahul\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/hospital",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "hospital"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get All Patients",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/hospital?page=1&limit=5",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "hospital"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Search Patient",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/hospital?search=Rahul",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "hospital"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Patient By ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/hospital/{{hospital_id}}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "hospital",
+            "{{hospital_id}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Update Patient",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\":\"Rahul Kumar\",\n  \"age\":26,\n  \"Gender\":\"Male\",\n  \"phone\":\"9999999999\",\n  \"Adress\":\"Hubli\",\n  \"DOF\":\"2026-07-07\"\n}"
+        },
+        "url": {
+          "raw": "{{base_url}}/hospital/{{hospital_id}}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "hospital",
+            "{{hospital_id}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Delete Patient",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "{{base_url}}/hospital/{{hospital_id}}",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "hospital",
+            "{{hospital_id}}"
+          ]
+        }
+      }
+    }
+  ]
+}
